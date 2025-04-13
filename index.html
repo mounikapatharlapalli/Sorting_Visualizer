@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sorting Visualizer</title>
+  <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="array-inputs">
+        <label for="a_size">Array Size</label>
+        <input id="a_size" type="range" min="20" max="150" step="1" value="80" />
+
+        <label for="a_speed">Speed</label>
+        <input id="a_speed" type="range" min="1" max="5" step="1" value="4" />
+
+        <button id="a_generate" class="btn">Generate Array</button>
+      </div>
+
+      <div class="header-right">
+        <h1 class="nav-heading">Sorting Visualizer</h1>
+        <div class="algos">
+          <button class="btn algo-btn">Bubble</button>
+          <button class="btn algo-btn">Selection</button>
+          <button class="btn algo-btn">Insertion</button>
+          <button class="btn algo-btn">Merge</button>
+          <button class="btn algo-btn">Quick</button>
+          <button class="btn algo-btn">Heap</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="main-content">
+    <div id="Info_Cont1" class="info-panel">
+      <h3>Time Complexity</h3>
+      <div class="complexity-container">
+        <p><span>Worst:</span> <span id="Time_Worst"></span></p>
+        <p><span>Average:</span> <span id="Time_Average"></span></p>
+        <p><span>Best:</span> <span id="Time_Best"></span></p>
+      </div>
+    </div>
+
+    <div id="array_container" class="array-visualizer"></div>
+
+    <div id="Info_Cont2" class="info-panel">
+      <h3>Space Complexity</h3>
+      <div class="complexity-container">
+        <p><span>Worst:</span> <span id="Space_Worst"></span></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Sorting Visualizer</p>
+  </footer>
+
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/visualizations.js"></script>
+  <script src="./scripts/bubble_sort.js"></script>
+  <script src="./scripts/selection_sort.js"></script>
+  <script src="./scripts/insertion_sort.js"></script>
+  <script src="./scripts/merge_sort.js"></script>
+  <script src="./scripts/quick_sort.js"></script>
+  <script src="./scripts/heap_sort.js"></script>
+</body>
+</html>

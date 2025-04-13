@@ -1,0 +1,212 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f6f9;
+  color: #2c3e50;
+}
+
+/* Navbar Styling */
+nav {
+  background: linear-gradient(135deg, #fff0f6, #fce4ec);
+  color: #2c3e50;
+  display: grid;
+  grid-template-columns: 30% 60%;
+  column-gap: 10%;
+  padding: 1.5rem 5%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Inputs Section */
+nav .array-inputs {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: center;
+  gap: 10px;
+}
+
+nav .array-inputs select,
+nav .array-inputs input {
+  background-color: #ffffff;
+  color: #2c3e50;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+nav .array-inputs select:focus,
+nav .array-inputs input:focus {
+  border-color: #ff85a2;
+}
+
+/* Generate Array Button */
+nav .array-inputs #a_generate {
+  background-color: #ff85a2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: background 0.3s ease;
+}
+
+nav .array-inputs #a_generate:hover {
+  background-color: #ff5e8e;
+  cursor: pointer;
+}
+.header-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.header-right .nav-heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #ff758c, #ff7eb3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.5rem;
+}
+
+.header-right .algos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+.header-right .algos .btn {
+  background-color: #ffffff;
+  border: 2px solid #ff85a2;
+  color: #2c3e50;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(255, 126, 179, 0.2);
+}
+
+.header-right .algos .btn:hover {
+  background-color: #ff85a2;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 6px 10px rgba(255, 126, 179, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Optional Button States */
+.header-right .algos .butt_locked {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.header-right .algos .butt_selected {
+  background-color: #ff85a2;
+  color: white;
+  font-weight: bold;
+  border: 2px solid #ff85a2;
+}
+
+.header-right .algos .butt_selected:hover {
+  cursor: default;
+}
+
+/* Section Styling */
+section {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+/* Complexity Info Containers */
+section .Complexity_Containers {
+  margin-top: 2rem;
+}
+
+section .Complexity_Containers .Pair_Definitions {
+  margin-top: 1rem;
+}
+
+section .Complexity_Containers .Pair_Definitions p {
+  display: inline;
+  font-size: 14px;
+  text-transform: none;
+}
+
+section .Complexity_Containers .Pair_Definitions p.Sub_Heading {
+  font-weight: 600;
+  color: #555;
+}
+
+/* Info Containers */
+section #Info_Cont1,
+section #Info_Cont2 {
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+section #Info_Cont1 h3,
+section #Info_Cont2 h3 {
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Array Container (Visualizer Area) */
+section #array_container {
+  display: flex;
+  width: 100%;
+  height: 70vh;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-top: 2rem;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.bar {
+  display: inline-block;
+  width: 5px;
+  margin: 0 1px;
+  background-color: #3498db;
+  transition: height 0.3s ease, background-color 0.3s ease;
+}
+
+.bar.comparing {
+  background-color: #f1c40f;
+}
+
+.bar.swapping {
+  background-color: #e74c3c;
+}
+
+.bar.sorted {
+  background-color: #2ecc71;
+}
+
+/* Hide Utility */
+.hide {
+  display: none;
+}
